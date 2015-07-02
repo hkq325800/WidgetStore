@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
 
     final View actionB = findViewById(R.id.action_b);
 
-    FloatingActionButton actionC = new FloatingActionButton(getBaseContext());
+    FloatingActionButton actionC = new FloatingActionButton(getBaseContext());//右下
     actionC.setTitle("Hide/Show Action above");
     actionC.setOnClickListener(new OnClickListener() {
       @Override
@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
         actionB.setVisibility(actionB.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
       }
     });
-    ((FloatingActionsMenu) findViewById(R.id.multiple_actions)).addButton(actionC);
+    ((FloatingActionsMenu) findViewById(R.id.multiple_actions)).addButton(actionC);//添加一个按钮
 
     final FloatingActionButton removeAction = (FloatingActionButton) findViewById(R.id.button_remove);
     removeAction.setOnClickListener(new OnClickListener() {
@@ -64,9 +64,9 @@ public class MainActivity extends Activity {
     });
 
     // Test that FAMs containing FABs with visibility GONE do not cause crashes
-    findViewById(R.id.button_gone).setVisibility(View.GONE);
+    //findViewById(R.id.button_gone).setVisibility(View.GONE);
 
-    FloatingActionsMenu rightLabels = (FloatingActionsMenu) findViewById(R.id.right_labels);
+    FloatingActionsMenu rightLabels = (FloatingActionsMenu) findViewById(R.id.right_labels);//左下第二个
     FloatingActionButton addedOnce = new FloatingActionButton(this);
     addedOnce.setTitle("Added once");
     rightLabels.addButton(addedOnce);

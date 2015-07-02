@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/switchlayout/!svn/ver/10/trunk/SwichLayoutDemo
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/switchlayout/!svn/ver/11/trunk/SwichLayoutDemo/AndroidManifest.xml
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/switchlayout/!svn/ver/11/trunk/SwichLayoutDemo/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/switchlayout/!svn/ver/11/trunk/SwichLayoutDemo/.project
+END
+proguard-project.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/switchlayout/!svn/ver/11/trunk/SwichLayoutDemo/proguard-project.txt
+END
+project.properties
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/switchlayout/!svn/ver/11/trunk/SwichLayoutDemo/project.properties
+END
+ic_launcher-web.png
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/switchlayout/!svn/ver/11/trunk/SwichLayoutDemo/ic_launcher-web.png
+END

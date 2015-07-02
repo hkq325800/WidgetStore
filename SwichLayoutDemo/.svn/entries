@@ -1,0 +1,122 @@
+8
+
+dir
+10
+http://code.taobao.org/svn/switchlayout/trunk/SwichLayoutDemo
+http://code.taobao.org/svn/switchlayout
+
+
+
+2014-12-28T16:59:25.846300Z
+10
+jaychou
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b4419717-1050-4cc4-bcaa-c75cd28d651c
+
+.classpath
+file
+11
+
+
+
+2014-12-27T14:29:30.804000Z
+e43b9e994685d1055e421f721677fe94
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+
+.project
+file
+11
+
+
+
+2014-12-28T16:49:47.158000Z
+d99906876511168988c84aad1919a32c
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+
+.settings
+dir
+
+AndroidManifest.xml
+file
+11
+
+
+
+2014-12-28T16:51:21.529000Z
+fcb0a2d3e4a90a662ae7c231ae3b51a8
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+
+assets
+dir
+
+bin
+dir
+
+gen
+dir
+
+ic_launcher-web.png
+file
+11
+
+
+
+2014-12-27T14:29:29.930000Z
+03162f4ee138bcbae36f78b1d25dbd5b
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+has-props
+
+libs
+dir
+
+proguard-project.txt
+file
+11
+
+
+
+2014-12-27T14:29:28.853000Z
+18bfe77c342b4698f1cef19cf8d918e2
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+
+project.properties
+file
+11
+
+
+
+2014-12-27T15:45:07.181000Z
+9c57dcdf382c16ec1e6ff4d497fa3a84
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+
+res
+dir
+
+src
+dir
+

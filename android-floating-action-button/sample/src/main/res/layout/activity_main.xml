@@ -13,7 +13,7 @@
         fab:fab_colorPressed="@color/pink_pressed"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"/><!--下方中间-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,7 +22,7 @@
         android:text="Text below button"
         android:layout_centerHorizontal="true"
         style="@style/menu_labels_style"
-        android:layout_marginBottom="48dp"/>
+        android:layout_marginBottom="48dp"/><!--一种文本style-->
 
     <com.getbase.floatingactionbutton.AddFloatingActionButton
         android:id="@+id/semi_transparent"
@@ -33,7 +33,7 @@
         fab:fab_colorNormal="@color/blue_semi_transparent"
         fab:fab_colorPressed="@color/blue_semi_transparent_pressed"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"/><!--紫色按钮-->
 
     <com.getbase.floatingactionbutton.FloatingActionButton
         android:id="@+id/setter"
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/semi_transparent"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"/><!--小的红圆，具体属性在代码中设置-->
 
     <com.getbase.floatingactionbutton.AddFloatingActionButton
         android:id="@+id/normal_plus"
@@ -55,7 +55,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"/>
+        android:layout_marginStart="16dp"/><!--左下第一个-->
 
     <com.getbase.floatingactionbutton.FloatingActionsMenu
         android:id="@+id/right_labels"
@@ -88,7 +88,7 @@
             fab:fab_title="Another one on the right"
             fab:fab_colorPressed="@color/white_pressed"/>
 
-    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    </com.getbase.floatingactionbutton.FloatingActionsMenu><!--左下第二个-->
 
     <com.getbase.floatingactionbutton.FloatingActionsMenu
         android:id="@+id/multiple_actions"
@@ -121,7 +121,7 @@
             fab:fab_title="Action with a very long name that won\'t fit on the screen"
             fab:fab_colorPressed="@color/white_pressed"/>
 
-    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    </com.getbase.floatingactionbutton.FloatingActionsMenu><!--右下第一个-->
 
     <com.getbase.floatingactionbutton.FloatingActionsMenu
         android:id="@+id/multiple_actions_down"
@@ -138,14 +138,14 @@
         fab:fab_labelStyle="@style/menu_labels_style"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp">
+        android:layout_marginEnd="16dp"><!--fab:fab_expandDirection设置菜单方向 默认为上-->
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
-            fab:fab_size="mini"/>
+            fab:fab_size="mini"/><!--右上第三个-->
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/button_remove"
@@ -153,14 +153,14 @@
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
             fab:fab_colorPressed="@color/white_pressed"
-            fab:fab_title="Click to remove"/>
+            fab:fab_title="Click to remove"/><!--右上第二个-->
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/button_gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
-            fab:fab_colorPressed="@color/white_pressed"/>
+            fab:fab_colorPressed="@color/white_pressed"/><!--右上第一个-->
 
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 

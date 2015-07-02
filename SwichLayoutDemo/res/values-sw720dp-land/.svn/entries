@@ -1,0 +1,40 @@
+8
+
+dir
+11
+http://code.taobao.org/svn/switchlayout/trunk/SwichLayoutDemo/res/values-sw720dp-land
+http://code.taobao.org/svn/switchlayout
+
+
+
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b4419717-1050-4cc4-bcaa-c75cd28d651c
+
+dimens.xml
+file
+
+
+
+
+2014-12-27T14:29:30.533000Z
+dcc353a80efd5966311bffc9e101dc58
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+

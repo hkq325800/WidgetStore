@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/switchlayout/!svn/ver/11/trunk/SwichLayoutDemo/res/drawable
+END
+title_selector.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/switchlayout/!svn/ver/11/trunk/SwichLayoutDemo/res/drawable/title_selector.xml
+END
+title_normal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/switchlayout/!svn/ver/11/trunk/SwichLayoutDemo/res/drawable/title_normal.xml
+END
+title_pressed.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/switchlayout/!svn/ver/11/trunk/SwichLayoutDemo/res/drawable/title_pressed.xml
+END

@@ -1,0 +1,54 @@
+8
+
+dir
+11
+http://code.taobao.org/svn/switchlayout/trunk/SwichLayoutDemo/libs
+http://code.taobao.org/svn/switchlayout
+
+
+
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b4419717-1050-4cc4-bcaa-c75cd28d651c
+
+SwitchLayout1.0.jar
+file
+
+
+
+
+2014-12-28T16:53:41.734000Z
+85a4d39a26fe6b4fe05cb0fefc5e294a
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+has-props
+
+android-support-v4.jar
+file
+
+
+
+
+2014-12-27T14:29:29.637000Z
+ed257a47cae11af1a55614055b879947
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+has-props
+

@@ -1,0 +1,52 @@
+8
+
+dir
+11
+http://code.taobao.org/svn/switchlayout/trunk/SwichLayoutDemo/src/com/tandong/swichlayoutdemo
+http://code.taobao.org/svn/switchlayout
+
+
+
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b4419717-1050-4cc4-bcaa-c75cd28d651c
+
+MainActivity.java
+file
+
+
+
+
+2014-12-28T16:56:28.617000Z
+77d44bcdd8b5133367e922ca790ae407
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+
+SecondActivity.java
+file
+
+
+
+
+2014-12-28T16:51:21.520000Z
+2f815216d52f902098b888f5116a9e16
+2014-12-28T17:00:31.932391Z
+11
+jaychou
+
