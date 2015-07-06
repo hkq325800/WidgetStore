@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">screenhot</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="btn_save">save</string>
+    <string name="btn_canel">canel</string>
+    <string name="activity_no_root">亲, 您的 手机没有root权限, 请先获取root权限！！</string>
+    <string name="activity_start_success">亲, 服务已经正常启动, 您现在可以使用摇一摇截屏！！！</string>
+    <string name="activity_starting">亲, 正在启动服务中, 请稍等……</string>
+    <string name="service_shutdown">亲, 已经停止截屏服务</string>
+    <string name="no_market">亲, 您没有安装市场软件!!</string>
+
+</resources>

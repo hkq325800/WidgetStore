@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="70dp"
     android:background="#22b3b6"
+    android:id="@+id/layout"
     >
     <TextView
         android:id="@+id/tv"

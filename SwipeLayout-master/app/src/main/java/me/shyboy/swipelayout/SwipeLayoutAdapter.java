@@ -30,7 +30,7 @@ public abstract class SwipeLayoutAdapter<T> extends ArrayAdapter
      */
     public SwipeLayoutAdapter(Context context,int contentViewResourceId,int actionViewResourceId,T[] objects)
     {
-        super(context,R.layout.item_swipe,objects);
+        super(context,_resourceId,objects);
         _contentViewResourceId = contentViewResourceId;
         _actionViewResourceId = actionViewResourceId;
     }
@@ -44,7 +44,7 @@ public abstract class SwipeLayoutAdapter<T> extends ArrayAdapter
      */
     public SwipeLayoutAdapter(Context context,int contentViewResourceId,int actionViewResourceId,List<T> objects)
     {
-        super(context,R.layout.item_swipe,objects);
+        super(context,_resourceId,objects);
         _contentViewResourceId = contentViewResourceId;
         _actionViewResourceId = actionViewResourceId;
     }

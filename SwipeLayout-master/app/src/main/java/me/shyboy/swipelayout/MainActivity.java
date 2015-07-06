@@ -1,12 +1,19 @@
 package me.shyboy.swipelayout;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.HorizontalScrollView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +53,7 @@ public class MainActivity extends Activity {
     private ListView mListView;
     private List<String> mData;
     private static int mCurrentIndex;
-    private GridView mGridView;
+    //private GridView mGridView;
 
     //插入数据
     public void insertData(int n)
@@ -65,7 +72,13 @@ public class MainActivity extends Activity {
         insertData(30);
         mCurrentIndex = 0;
         mListView = (ListView)findViewById(R.id.listView);
-        mGridView = (GridView)findViewById(R.id.gridview);
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MainActivity.this,""+position,Toast.LENGTH_SHORT).show();
+            }
+        });
+        //mGridView = (GridView)findViewById(R.id.gridview);
         mAdapter = new MyAdapater(this,R.layout.item_content,R.layout.item_action,mData);
         //mGridView.setAdapter(mAdapter);
         //如果要使用GridView，只需要注释掉mListView.setAdapter(mAdapter);去掉上方的注释
@@ -96,9 +109,21 @@ public class MainActivity extends Activity {
             actionView.findViewById(R.id.action).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    parent.scrollTo(0, 0);
-                    _data.remove(position);
-                    notifyDataSetChanged();
+                    AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+                    dialog.setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            parent.scrollTo(0, 0);
+                            _data.remove(position);
+                            notifyDataSetChanged();
+                        }
+                    });
+                    dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {}
+                    });
+                    dialog.show();
+
                 }
             });
 

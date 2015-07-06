@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black"
+     >
+
+    
+    <TextView 
+        android:id="@+id/tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/darker_gray"
+        android:text="    这是模拟截图的demo,点击下面的按钮直接截图,当然你还可以在此基础上面进行扩展更多丰富的功能截图;(例如:摇一摇,或者开启截图服务,N秒时间后自动截图保存)"/>
+    
+    <ImageView 
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/keji"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dip"/>
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击截图" 
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dip"/>
+
+</LinearLayout>
