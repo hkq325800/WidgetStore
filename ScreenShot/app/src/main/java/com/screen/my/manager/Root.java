@@ -1,4 +1,4 @@
-package main.java.com.screen.manager;
+package com.screen.my.manager;
 
 import java.io.DataOutputStream;
 import java.io.IOException;

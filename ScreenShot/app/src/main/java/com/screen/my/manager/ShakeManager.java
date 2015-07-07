@@ -1,4 +1,4 @@
-package main.java.com.screen.manager;
+package com.screen.my.manager;
 
 import android.content.Context;
 import android.hardware.Sensor;

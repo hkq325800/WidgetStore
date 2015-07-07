@@ -1,4 +1,4 @@
-package com.screen.utils;
+package com.screen.my.utils;
 
 import java.io.File;
 import java.io.FileOutputStream;

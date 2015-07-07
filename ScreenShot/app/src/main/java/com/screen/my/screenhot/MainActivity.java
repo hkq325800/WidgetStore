@@ -1,7 +1,7 @@
-package com.screen.screenhot;
+package com.screen.my.screenhot;
 
-import com.screen.aidl.IScreenshotCallback;
-import com.screen.aidl.IScreenshotProvider;
+import com.screen.my.IScreenshotCallback;
+import com.screen.my.IScreenshotProvider;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -151,7 +151,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		if(null != progressDialog && progressDialog.isShowing()) {
 			progressDialog.dismiss();
 		}
-	};
+	}
 	
 	@Override
 	protected void onDestroy() {

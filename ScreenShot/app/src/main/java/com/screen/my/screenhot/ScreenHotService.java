@@ -1,17 +1,17 @@
-package main.java.com.screen.screenhot;
+package com.screen.my.screenhot;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import com.screen.aidl.IScreenshotCallback;
-import com.screen.aidl.IScreenshotProvider;
-import com.screen.manager.Root;
-import com.screen.manager.ScreenHotManager;
-import com.screen.manager.ShakeManager;
-import com.screen.manager.Root.RootPermissionListener;
-import com.screen.manager.ShakeManager.ShakeChangeListener;
-import com.screen.utils.Utils;
+import com.screen.my.IScreenshotCallback;
+import com.screen.my.IScreenshotProvider;
+import com.screen.my.manager.Root;
+import com.screen.my.manager.ScreenHotManager;
+import com.screen.my.manager.ShakeManager;
+import com.screen.my.manager.Root.RootPermissionListener;
+import com.screen.my.manager.ShakeManager.ShakeChangeListener;
+import com.screen.my.utils.Utils;
 
 import android.app.Service;
 import android.content.Intent;

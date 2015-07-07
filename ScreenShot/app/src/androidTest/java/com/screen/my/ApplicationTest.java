@@ -1,4 +1,4 @@
-package com.screen;
+package com.screen.my;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

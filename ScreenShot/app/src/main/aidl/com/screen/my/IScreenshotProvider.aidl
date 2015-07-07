@@ -1,6 +1,6 @@
-package main.java.com.screen.aidl;
+package com.screen.my;
 
-import com.screen.aidl.IScreenshotCallback;
+import com.screen.my.IScreenshotCallback;
 
 interface IScreenshotProvider {
 	

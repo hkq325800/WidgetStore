@@ -1,7 +1,6 @@
-package main.java.com.screen.manager;
+package com.screen.my.manager;
 
 import java.io.File;
-import com.screen.screenhot.R;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,6 +14,8 @@ import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.widget.ImageView;
+
+import com.screen.my.screenhot.R;
 
 public class ScreenHotManager implements OnClickListener {
 	
