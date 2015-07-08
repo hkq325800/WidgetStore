@@ -8,21 +8,18 @@ import android.widget.HorizontalScrollView;
  * Created by foul on 14/12/8.
  */
 public class SwipeOnTouchListener implements View.OnTouchListener {
-
     private static HorizontalScrollView _currentActiveHSV = null;
+
     @Override
-    public boolean onTouch(View v, MotionEvent event)
-    {
+    public boolean onTouch(View v, MotionEvent event) {
         //获得ViewHolder
         SwipeViewHolder viewHolder = (SwipeViewHolder) v.getTag();
-        if(_currentActiveHSV != null && _currentActiveHSV != viewHolder.hSView)
-        {
-            _currentActiveHSV.smoothScrollTo(0,0);
+        if (_currentActiveHSV != null && _currentActiveHSV != viewHolder.hSView) {
+            _currentActiveHSV.smoothScrollTo(0, 0);
             _currentActiveHSV = null;
             return true;
         }
-        switch (event.getAction())
-        {
+        switch (event.getAction()) {
 
             case MotionEvent.ACTION_UP://?
                 //获得HorizontalScrollView滑动的水平方向值.
@@ -33,11 +30,9 @@ public class SwipeOnTouchListener implements View.OnTouchListener {
 
                 //注意使用smoothScrollTo,这样效果看起来比较圆滑,不生硬
                 //如果水平方向的移动值<操作区域的长度的一半,就复原
-                if (scrollX < actionW / 2)
-                {
+                if (scrollX < actionW / 2) {
                     viewHolder.hSView.smoothScrollTo(0, 0);
-                }
-                else//否则的话显示操作区域
+                } else//否则的话显示操作区域
                 {
                     viewHolder.hSView.smoothScrollTo(actionW, 0);//水平地进行scroll
                     _currentActiveHSV = viewHolder.hSView;
