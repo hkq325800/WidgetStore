@@ -1,4 +1,4 @@
-package com.netease.hzinstitute.adbwireless;
+package com.netease.hzinstitute;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

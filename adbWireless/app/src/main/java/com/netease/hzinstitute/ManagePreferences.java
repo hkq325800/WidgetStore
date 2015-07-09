@@ -1,4 +1,4 @@
-package com.netease.hzinstitute.adbwireless;
+package com.netease.hzinstitute;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -6,7 +6,6 @@ import android.preference.CheckBoxPreference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
-import com.netease.hzinstitute.adbWireless.R;
 
 
 @SuppressWarnings("unused")

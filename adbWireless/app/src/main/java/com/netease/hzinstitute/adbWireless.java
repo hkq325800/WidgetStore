@@ -1,4 +1,4 @@
-package com.netease.hzinstitute.adbwireless;
+package com.netease.hzinstitute;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -28,7 +28,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.netease.hzinstitute.adbWireless.R;
 
 
 public class adbWireless extends Activity {
