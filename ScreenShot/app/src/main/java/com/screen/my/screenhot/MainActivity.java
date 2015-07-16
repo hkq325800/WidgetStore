@@ -121,9 +121,14 @@ public class MainActivity extends Activity implements OnClickListener {
 			}
 			break;
 		case R.id.activity_btnStart:
-			isStop = false;
-			bindService(service, conn, BIND_AUTO_CREATE);
-			showDialog();
+			if(isStop) {
+				isStop = false;
+				showDialog();
+				bindService(service, conn, BIND_AUTO_CREATE);
+				dismissDialog();
+			} else {
+				Toast.makeText(this, "服务已开启", Toast.LENGTH_SHORT).show();
+			}
 			break;
 		case R.id.activity_btnStop:
 			if(!isStop) {
