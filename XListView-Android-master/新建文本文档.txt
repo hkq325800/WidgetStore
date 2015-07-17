@@ -1,0 +1,1 @@
+An ListView support "pull down refresh" and "pull up load" feature.
