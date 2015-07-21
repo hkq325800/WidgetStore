@@ -33,7 +33,7 @@ import android.widget.Toast;
 public class adbWireless extends Activity {
 
 	public static final String MSG_TAG = "ADBWIRELESS";
-	public static final String PORT = "5555";
+	public static final String PORT = "15555";
 
 	private WifiManager mWifiManager;
 	private NotificationManager mNotificationManager;
