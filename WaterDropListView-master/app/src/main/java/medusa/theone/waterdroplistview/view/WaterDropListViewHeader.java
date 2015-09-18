@@ -30,7 +30,7 @@ public class WaterDropListViewHeader extends FrameLayout {
     private IStateChangedListener mStateChangedListener;
 
     private int stretchHeight;
-    private  int readyHeight;
+    private int readyHeight;
     private static final int DISTANCE_BETWEEN_STRETCH_READY = 250;
 
     public enum STATE {
@@ -173,10 +173,11 @@ public class WaterDropListViewHeader extends FrameLayout {
         //通知水滴进行更新
         if(mState == STATE.stretch){
             float pullOffset = (float) Utils.mapValueFromRangeToRange(height, stretchHeight, readyHeight, 0, 1);
+            Log.d("pullOffset", String.valueOf(pullOffset));
             if(pullOffset < 0 || pullOffset >1){
                 throw new IllegalArgumentException("pullOffset should between 0 and 1!"+mState+" "+height);
             }
-            Log.e("pullOffset", "pullOffset:" + pullOffset);
+            //Log.e("pullOffset", "pullOffset:" + pullOffset);
             mWaterDropView.updateComleteState(pullOffset);
         }
 
@@ -204,6 +205,6 @@ public class WaterDropListViewHeader extends FrameLayout {
     }
 
     public interface IStateChangedListener {
-        public void notifyStateChanged(STATE oldState, STATE newState);
+        void notifyStateChanged(STATE oldState, STATE newState);
     }
 }

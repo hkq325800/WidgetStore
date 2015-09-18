@@ -9,8 +9,8 @@
 package medusa.theone.waterdroplistview.view;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
@@ -33,7 +33,7 @@ public class WaterDropListView extends ListView implements OnScrollListener,Wate
 	private WaterDropListViewHeader mHeaderView;
 	// header view content, use it to calculate the Header's height. And hide it
 	// when disable pull refresh.
-//	private RelativeLayout mHeaderViewContent;
+	//private RelativeLayout mHeaderViewContent;
 	private boolean mEnablePullRefresh = true;
 //	private boolean mPullRefreshing = false; // is refreashing.
 
@@ -94,12 +94,14 @@ public class WaterDropListView extends ListView implements OnScrollListener,Wate
 
 		// init footer view
 		mFooterView = new WaterDropListViewFooter(context);
+		setPullRefreshEnable(true);
+		setPullLoadEnable(true);
 	}
 
 	@Override
 	public void setAdapter(ListAdapter adapter) {
 		// make sure XListViewFooter is the last footer view, and only add once.
-		if (mIsFooterReady == false) {
+		if (!mIsFooterReady) {
 			mIsFooterReady = true;
 			addFooterView(mFooterView);
 		}
@@ -111,14 +113,15 @@ public class WaterDropListView extends ListView implements OnScrollListener,Wate
 	 * 
 	 * @param enable
 	 */
-	/*public void setPullRefreshEnable(boolean enable) {
+	public void setPullRefreshEnable(boolean enable) {
 		mEnablePullRefresh = enable;
 		if (!mEnablePullRefresh) { // disable, hide the content
-			mHeaderViewContent.setVisibility(View.INVISIBLE);
+			mHeaderView.setVisibility(View.INVISIBLE);
+			mHeaderView.setStateChangedListener(null);
 		} else {
-			mHeaderViewContent.setVisibility(View.VISIBLE);
+			mHeaderView.setVisibility(View.VISIBLE);
 		}
-	}*/
+	}
 
 	/**
 	 * enable or disable pull up load more feature.
@@ -163,7 +166,7 @@ public class WaterDropListView extends ListView implements OnScrollListener,Wate
 	 * stop load more, reset footer view.
 	 */
 	public void stopLoadMore() {
-		if (mPullLoading == true) {
+		if (mPullLoading) {
 			mPullLoading = false;
 			mFooterView.setState(WaterDropListViewFooter.STATE.normal);
 		}
@@ -265,44 +268,45 @@ public class WaterDropListView extends ListView implements OnScrollListener,Wate
 		}
 	}
 
+	//控制样式
 	@Override
-	public boolean onTouchEvent(MotionEvent ev) {
+	public boolean onTouchEvent(@NonNull MotionEvent ev) {
 		if (mLastY == -1) {
 			mLastY = ev.getRawY();
 		}
 
 		switch (ev.getAction()) {
-		case MotionEvent.ACTION_DOWN:
-			mLastY = ev.getRawY();
-			isTouchingScreen = true;
-			break;
-		case MotionEvent.ACTION_MOVE:
-			final float deltaY = ev.getRawY() - mLastY;
-			mLastY = ev.getRawY();
-			if (getFirstVisiblePosition() == 0 && (mHeaderView.getVisiableHeight() > 0 || deltaY > 0)) {
-				// the first item is showing, header has shown or pull down.
-				updateHeaderHeight(deltaY / OFFSET_RADIO);
-				invokeOnScrolling();
-			} else if (getLastVisiblePosition() == mTotalItemCount - 1 && (mFooterView.getBottomMargin() > 0 || deltaY < 0)) {
-				// last item, already pulled up or want to pull up.
-				updateFooterHeight(-deltaY / OFFSET_RADIO);
-			}
-			break;
-		default:
-			mLastY = -1; // reset
-			isTouchingScreen = false;
-			//TODO 存在bug：当两个if的条件都满足的时候，只能滚动一个，所以在reSetHeader的时候就不起作用了，一般就只会reSetFooter
-			if (getFirstVisiblePosition() == 0) {
-				resetHeaderHeight();
-			}
-			if (getLastVisiblePosition() == mTotalItemCount - 1) {
-				// invoke load more.
-				if (mEnablePullLoad && mFooterView.getBottomMargin() > PULL_LOAD_MORE_DELTA) {
-					startLoadMore();
+			case MotionEvent.ACTION_DOWN:
+				mLastY = ev.getRawY();
+				isTouchingScreen = true;
+				break;
+			case MotionEvent.ACTION_MOVE:
+				final float deltaY = ev.getRawY() - mLastY;
+				mLastY = ev.getRawY();
+				if (getFirstVisiblePosition() == 0 && (mHeaderView.getVisiableHeight() > 0 || deltaY > 0)) {
+					// the first item is showing, header has shown or pull down.
+					updateHeaderHeight(deltaY / OFFSET_RADIO);
+					invokeOnScrolling();
+				} else if (getLastVisiblePosition() == mTotalItemCount - 1 && (mFooterView.getBottomMargin() > 0 || deltaY < 0)) {
+					// last item, already pulled up or want to pull up.
+					updateFooterHeight(-deltaY / OFFSET_RADIO);
 				}
-				resetFooterHeight();
-			}
-			break;
+				break;
+			default:
+				mLastY = -1; // reset
+				isTouchingScreen = false;
+				//TODO 存在bug：当两个if的条件都满足的时候，只能滚动一个，所以在reSetHeader的时候就不起作用了，一般就只会reSetFooter
+				if (getFirstVisiblePosition() == 0) {
+					resetHeaderHeight();
+				}
+				if (getLastVisiblePosition() == mTotalItemCount - 1) {
+					// invoke load more.
+					if (mEnablePullLoad && mFooterView.getBottomMargin() > PULL_LOAD_MORE_DELTA) {
+						startLoadMore();//上拉加载更多
+					}
+					resetFooterHeight();
+				}
+				break;
 		}
 		return super.onTouchEvent(ev);
 	}
@@ -346,6 +350,7 @@ public class WaterDropListView extends ListView implements OnScrollListener,Wate
 			mScrollListener.onScroll(view, firstVisibleItem, visibleItemCount, totalItemCount);
 		}
 	}
+	//interface IStateChangedListener
 	@Override
 	public void notifyStateChanged(WaterDropListViewHeader.STATE oldState, WaterDropListViewHeader.STATE newState) {
 		if(newState == WaterDropListViewHeader.STATE.refreshing){
@@ -362,15 +367,15 @@ public class WaterDropListView extends ListView implements OnScrollListener,Wate
 	 * you can listen ListView.OnScrollListener or this one. it will invoke onXScrolling when header/footer scroll back.
 	 */
 	public interface OnXScrollListener extends OnScrollListener {
-		public void onXScrolling(View view);
+		void onXScrolling(View view);
 	}
 
 	/**
 	 * implements this interface to get refresh/load more event.
 	 */
 	public interface IWaterDropListViewListener {
-		public void onRefresh();
+		void onRefresh();
 
-		public void onLoadMore();
+		void onLoadMore();
 	}
 }

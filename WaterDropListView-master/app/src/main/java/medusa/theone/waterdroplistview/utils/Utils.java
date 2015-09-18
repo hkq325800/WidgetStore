@@ -27,9 +27,9 @@ public class Utils {
             double fromHigh,
             double toLow,
             double toHigh) {
-        double fromRangeSize = fromHigh - fromLow;
-        double toRangeSize = toHigh - toLow;
-        double valueScale = (value - fromLow) / fromRangeSize;
+        double fromRangeSize = fromHigh - fromLow;//250
+        double toRangeSize = toHigh - toLow;//1
+        double valueScale = (value - fromLow) / fromRangeSize;//0.02
         return toLow + (valueScale * toRangeSize);
     }
 

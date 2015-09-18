@@ -2,13 +2,13 @@ package medusa.theone.waterdroplistview.entity;
 
 /**
  * Created by xiayong on 2015/6/25.
- * ÊµĞÄÔ²
+ * å®å¿ƒåœ†
  */
 public class Circle {
-    private float x;//Ô²x×ø±ê
-    private float y;//Ô²y×ø±ê
-    private float radius;//Ô²°ë¾¶
-    private int color;//Ô²µÄÑÕÉ«
+    private float x;//åœ†xåæ ‡
+    private float y;//åœ†yåæ ‡
+    private float radius;//åœ†åŠå¾„
+    private int color;//åœ†çš„é¢œè‰²
 
     public float getX() {
         return x;
