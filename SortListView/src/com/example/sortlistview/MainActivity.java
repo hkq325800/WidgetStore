@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
 		});
 		
 		SourceDateList = filledData(getResources().getStringArray(R.array.date));
-		
+		SideBar.show = setHide();
 		// 根据a-z进行排序源数据
 		Collections.sort(SourceDateList, pinyinComparator);
 		adapter = new SortAdapter(this, SourceDateList);
@@ -109,6 +109,17 @@ public class MainActivity extends Activity {
 		});
 	}
 
+
+	private ArrayList<String> setHide() {
+		// TODO Auto-generated method stub
+		ArrayList<String> temp = new ArrayList<String>();
+		for(int i = 0;i<SourceDateList.size();i++){
+			if(!temp.contains(SourceDateList.get(i).getSortLetters())){
+				temp.add(SourceDateList.get(i).getSortLetters());
+			}
+		}
+		return temp;
+	}
 
 	/**
 	 * 为ListView填充数据

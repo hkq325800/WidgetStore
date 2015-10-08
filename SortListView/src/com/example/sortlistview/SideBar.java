@@ -1,5 +1,7 @@
 package com.example.sortlistview;
 
+import java.util.ArrayList;
+
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -15,9 +17,10 @@ public class SideBar extends View {
 	// 触摸事件
 	private OnTouchingLetterChangedListener onTouchingLetterChangedListener;
 	// 26个字母
-	public static String[] b = { "A", "B", "C", "D", "E", "F", "G", "H", "I",
+	public static String[] all = { "A", "B", "C", "D", "E", "F", "G", "H", "I",
 			"J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
 			"W", "X", "Y", "Z", "#" };
+	public static ArrayList<String> show;
 	private int choose = -1;// 选中
 	private Paint paint = new Paint();
 
@@ -48,23 +51,25 @@ public class SideBar extends View {
 		// 获取焦点改变背景颜色.
 		int height = getHeight();// 获取对应高度
 		int width = getWidth(); // 获取对应宽度
-		int singleHeight = height / b.length;// 获取每一个字母的高度
+		int singleHeight = height / all.length;// 获取每一个字母的高度
 
-		for (int i = 0; i < b.length; i++) {
+		for (int i = 0; i < all.length; i++) {
 			paint.setColor(Color.rgb(33, 65, 98));
 			// paint.setColor(Color.WHITE);
 			paint.setTypeface(Typeface.DEFAULT_BOLD);
 			paint.setAntiAlias(true);
-			paint.setTextSize(20);
+			paint.setTextSize(27);
 			// 选中的状态
 			if (i == choose) {
 				paint.setColor(Color.parseColor("#3399ff"));
 				paint.setFakeBoldText(true);
 			}
 			// x坐标等于中间-字符串宽度的一半.
-			float xPos = width / 2 - paint.measureText(b[i]) / 2;
+			float xPos = width / 2 - paint.measureText(all[i]) / 2;
 			float yPos = singleHeight * i + singleHeight;
-			canvas.drawText(b[i], xPos, yPos, paint);
+			if(show.contains(all[i])){
+				canvas.drawText(all[i], xPos, yPos, paint);
+			}
 			paint.reset();// 重置画笔
 		}
 
@@ -76,7 +81,7 @@ public class SideBar extends View {
 		final float y = event.getY();// 点击y坐标
 		final int oldChoose = choose;
 		final OnTouchingLetterChangedListener listener = onTouchingLetterChangedListener;
-		final int c = (int) (y / getHeight() * b.length);// 点击y坐标所占总高度的比例*b数组的长度就等于点击b中的个数.
+		final int c = (int) (y / getHeight() * all.length);// 点击y坐标所占总高度的比例*b数组的长度就等于点击b中的个数.
 
 		switch (action) {
 		case MotionEvent.ACTION_UP:
@@ -91,12 +96,12 @@ public class SideBar extends View {
 		default:
 			setBackgroundResource(R.drawable.sidebar_background);
 			if (oldChoose != c) {
-				if (c >= 0 && c < b.length) {
+				if (c >= 0 && c < all.length) {
 					if (listener != null) {
-						listener.onTouchingLetterChanged(b[c]);
+						listener.onTouchingLetterChanged(all[c]);
 					}
-					if (mTextDialog != null) {
-						mTextDialog.setText(b[c]);
+					if (mTextDialog != null&&show.contains(all[c])) {
+						mTextDialog.setText(all[c]);
 						mTextDialog.setVisibility(View.VISIBLE);
 					}
 					
