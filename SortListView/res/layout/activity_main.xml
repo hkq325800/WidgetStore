@@ -2,19 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#cbc7cc"
     android:orientation="vertical" >
 
     <com.example.sortlistview.ClearEditText
         android:id="@+id/filter_edit"
-        android:layout_marginTop="5dip"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/search_bar_edit_selector"
+        android:layout_height="30dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/search_bar_edit_selector_new"
         android:drawableLeft="@drawable/search_bar_icon_normal"
+        android:focusable="true"
         android:hint="请输入关键字"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:singleLine="true"
+        android:textColor="#cbc7cc"
         android:textColorHint="#cbc7cc"
-        android:textSize="13sp"
-        android:singleLine="true" />
+        android:textSize="13sp" />
 
     <FrameLayout
         android:layout_width="fill_parent"
@@ -24,10 +32,30 @@
             android:id="@+id/country_lvcountry"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:scrollbars="@null"
-            android:background="#FFFFFF"
             android:layout_gravity="center"
-            android:divider="@null" />
+            android:background="#FFFFFF"
+            android:divider="@null"
+            android:scrollbars="@null" />
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="22dp"
+            android:layout_alignParentTop="true" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="22dp"
+                android:layout_marginRight="15dp"
+                android:background="#f5f5f5"
+                android:paddingBottom="5dip"
+                android:paddingLeft="15dip"
+                android:paddingTop="5dip"
+                android:text=""
+                android:textColor="#454545"
+                android:textSize="10sp" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/dialog"

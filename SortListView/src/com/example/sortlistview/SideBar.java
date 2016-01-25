@@ -19,7 +19,7 @@ public class SideBar extends View {
 	// 26个字母
 	public static String[] all = { "A", "B", "C", "D", "E", "F", "G", "H", "I",
 			"J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
-			"W", "X", "Y", "Z", "#" };
+			"W", "X", "Y", "Z" };// "#"
 	public static ArrayList<String> show;
 	private int choose = -1;// 选中
 	private Paint paint = new Paint();
@@ -29,7 +29,6 @@ public class SideBar extends View {
 	public void setTextView(TextView mTextDialog) {
 		this.mTextDialog = mTextDialog;
 	}
-
 
 	public SideBar(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
@@ -65,11 +64,11 @@ public class SideBar extends View {
 				paint.setFakeBoldText(true);
 			}
 			// x坐标等于中间-字符串宽度的一半.
-			float xPos = 60;//width / 2 - paint.measureText(all[i]) / 2;
-			float yPos = singleHeight * i + singleHeight;
-//			if(show.contains(all[i])){
-				canvas.drawText(all[i], xPos, yPos, paint);
-//			}
+			float xPos = 60;// width / 2 - paint.measureText(all[i]) / 2;
+			float yPos = singleHeight * 4 / 5 * i + singleHeight;
+			// if(show.contains(all[i])){
+			canvas.drawText(all[i], xPos, yPos, paint);
+			// }
 			paint.reset();// 重置画笔
 		}
 
@@ -78,14 +77,15 @@ public class SideBar extends View {
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent event) {
 		final int action = event.getAction();
-		final float y = event.getY();// 点击y坐标
+		final float y = event.getY() * 6 / 5;// 点击y坐标 * 5 / 4
 		final int oldChoose = choose;
 		final OnTouchingLetterChangedListener listener = onTouchingLetterChangedListener;
 		final int c = (int) (y / getHeight() * all.length);// 点击y坐标所占总高度的比例*b数组的长度就等于点击b中的个数.
-
+		// singleHeight * 4 / 5 * i + singleHeight singleHeight * i +
+		// singleHeight
 		switch (action) {
 		case MotionEvent.ACTION_UP:
-			setBackgroundDrawable(new ColorDrawable(0x00000000));
+			setBackgroundColor(0x00000000);
 			choose = -1;//
 			invalidate();
 			if (mTextDialog != null) {
@@ -94,17 +94,17 @@ public class SideBar extends View {
 			break;
 
 		default:
-//			setBackgroundResource(R.drawable.sidebar_background);
+			// setBackgroundResource(R.drawable.sidebar_background);
 			if (oldChoose != c) {
 				if (c >= 0 && c < all.length) {
 					if (listener != null) {
 						listener.onTouchingLetterChanged(all[c]);
 					}
-					if (mTextDialog != null/*&&show.contains(all[c])*/) {
+					if (mTextDialog != null/* &&show.contains(all[c]) */) {
 						mTextDialog.setText(all[c]);
 						mTextDialog.setVisibility(View.VISIBLE);
 					}
-					
+
 					choose = c;
 					invalidate();
 				}

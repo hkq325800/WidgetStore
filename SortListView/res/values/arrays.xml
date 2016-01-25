@@ -2,6 +2,23 @@
 <resources>
 
     <string-array name="date">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>G</item>
+        <item>H</item>
+        <item>J</item>
+        <item>L</item>
+        <item>N</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>W</item>
+        <item>Y</item>
+        <item>Z</item>
         <item>阿妹</item>
         <item>阿郎</item>
         <item>陈奕迅</item>

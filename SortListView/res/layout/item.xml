@@ -10,33 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginRight="15dp"
-        android:background="#cbc7cc" />
-
-    <TextView
-        android:id="@+id/catalog"
-        android:layout_width="fill_parent"
-        android:layout_height="22dp"
-        android:background="#f5f5f5"
-        android:paddingBottom="5dip"
-        android:paddingLeft="15dip"
-        android:layout_marginRight="15dp"
-        android:textSize="10sp"
-        android:paddingTop="5dip"
-        android:text=""
-        android:textColor="#454545" />
-
-    <FrameLayout
-        android:id="@+id/lineBetween"
-        android:layout_width="match_parent"
-        android:layout_marginRight="15dp"
-        android:layout_height="0.5dp"
-        android:background="#cbc7cc" />
-
-    <FrameLayout
-        android:id="@+id/lineBottom"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
         android:background="#cbc7cc" />
 
@@ -53,5 +26,13 @@
         android:text=""
         android:textColor="#000000"
         android:textSize="14sp" />
+
+    <FrameLayout
+        android:id="@+id/lineBottom"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="#cbc7cc" />
 
 </LinearLayout>

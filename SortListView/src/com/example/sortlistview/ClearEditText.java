@@ -42,7 +42,8 @@ public class ClearEditText extends EditText implements
         	mClearDrawable = getResources() 
                     .getDrawable(R.drawable.emotionstore_progresscancelbtn); 
         } 
-        mClearDrawable.setBounds(0, 0, mClearDrawable.getIntrinsicWidth(), mClearDrawable.getIntrinsicHeight()); 
+//        mClearDrawable.setHotspotBounds(left, top, right, bottom);
+        mClearDrawable.setBounds(0, 0, mClearDrawable.getIntrinsicWidth()-20, mClearDrawable.getIntrinsicHeight()-20); 
         setClearIconVisible(false); 
         setOnFocusChangeListener(this); 
         addTextChangedListener(this); 
@@ -118,8 +119,8 @@ public class ClearEditText extends EditText implements
     /**
      * 设置晃动动画
      */
-    public void setShakeAnimation(){
-    	this.setAnimation(shakeAnimation(5));
+    public void setShakeAnimation(int counts, long duration){
+    	this.setAnimation(shakeAnimation(counts, duration));
     }
     
     
@@ -128,10 +129,10 @@ public class ClearEditText extends EditText implements
      * @param counts 1秒钟晃动多少下
      * @return
      */
-    public static Animation shakeAnimation(int counts){
+    public static Animation shakeAnimation(int counts, long duration){
     	Animation translateAnimation = new TranslateAnimation(0, 10, 0, 0);
     	translateAnimation.setInterpolator(new CycleInterpolator(counts));
-    	translateAnimation.setDuration(1000);
+    	translateAnimation.setDuration(duration);
     	return translateAnimation;
     }
  
