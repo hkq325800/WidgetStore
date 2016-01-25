@@ -115,10 +115,12 @@ public class MainActivity extends Activity {
 				if (visibleItemCount != 0) {
 					title.setVisibility(isFilterMode ? View.INVISIBLE
 							: View.VISIBLE);
+					SortModel modelSecond = new SortModel();
 					SortModel modelFirst = (SortModel) adapter
 							.getItem(firstVisibleItem);
-					SortModel modelSecond = (SortModel) adapter
-							.getItem(firstVisibleItem + 1);
+					if (adapter.getCount() > firstVisibleItem + 1)
+						modelSecond = (SortModel) adapter
+								.getItem(firstVisibleItem + 1);
 
 					if (firstVisibleItem != lastFirstVisibleItem) {
 						MarginLayoutParams params = (MarginLayoutParams) titleLayout
@@ -152,7 +154,6 @@ public class MainActivity extends Activity {
 					if (!isFirst) {
 						mClearEditText.setShakeAnimation(2, 500);
 					}
-					isFirst = false;
 				}
 			}
 		});
@@ -168,6 +169,8 @@ public class MainActivity extends Activity {
 				adapter.isFilterMode = isFilterMode;
 				Log.d("length", s.length() + "visible" + title.getVisibility());
 				filterData(s.toString());
+				if (isFirst)
+					isFirst = false;
 			}
 
 			@Override
