@@ -5,29 +5,53 @@
     android:gravity="center_vertical"
     android:orientation="vertical" >
 
+    <FrameLayout
+        android:id="@+id/lineTop"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginRight="15dp"
+        android:background="#cbc7cc" />
+
     <TextView
         android:id="@+id/catalog"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#E0E0E0"
-        android:textColor="#454545"
-        android:layout_weight="1.0"
-        android:paddingLeft="5dip"
-        android:paddingTop="5dip"
+        android:layout_height="22dp"
+        android:background="#f5f5f5"
         android:paddingBottom="5dip"
-        android:text="A"/>
+        android:paddingLeft="15dip"
+        android:layout_marginRight="15dp"
+        android:textSize="10sp"
+        android:paddingTop="5dip"
+        android:text=""
+        android:textColor="#454545" />
+
+    <FrameLayout
+        android:id="@+id/lineBetween"
+        android:layout_width="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_height="0.5dp"
+        android:background="#cbc7cc" />
+
+    <FrameLayout
+        android:id="@+id/lineBottom"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="#cbc7cc" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="40dp"
         android:layout_gravity="center_vertical"
+        android:background="#FFFFFF"
         android:gravity="center_vertical"
-        android:layout_weight="1.0"
-        android:textColor="#336598"
-        android:layout_marginLeft="5dip"
-        android:paddingTop="10dip"
         android:paddingBottom="10dip"
-        android:text="hhhh"/>
+        android:paddingLeft="15dip"
+        android:paddingTop="10dip"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="14sp" />
 
 </LinearLayout>

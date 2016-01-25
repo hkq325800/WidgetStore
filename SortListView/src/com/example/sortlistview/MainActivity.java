@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
 		});
 		
 		SourceDateList = filledData(getResources().getStringArray(R.array.date));
-		SideBar.show = setHide();
+//		SideBar.show = setHide();
 		// 根据a-z进行排序源数据
 		Collections.sort(SourceDateList, pinyinComparator);
 		adapter = new SortAdapter(this, SourceDateList);

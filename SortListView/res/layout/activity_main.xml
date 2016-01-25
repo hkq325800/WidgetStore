@@ -12,8 +12,9 @@
         android:background="@drawable/search_bar_edit_selector"
         android:drawableLeft="@drawable/search_bar_icon_normal"
         android:hint="请输入关键字"
-        android:singleLine="true"
-        android:textSize="15.0dip" />
+        android:textColorHint="#cbc7cc"
+        android:textSize="13sp"
+        android:singleLine="true" />
 
     <FrameLayout
         android:layout_width="fill_parent"
@@ -23,6 +24,8 @@
             android:id="@+id/country_lvcountry"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:scrollbars="@null"
+            android:background="#FFFFFF"
             android:layout_gravity="center"
             android:divider="@null" />
 

@@ -65,11 +65,11 @@ public class SideBar extends View {
 				paint.setFakeBoldText(true);
 			}
 			// x坐标等于中间-字符串宽度的一半.
-			float xPos = width / 2 - paint.measureText(all[i]) / 2;
+			float xPos = 60;//width / 2 - paint.measureText(all[i]) / 2;
 			float yPos = singleHeight * i + singleHeight;
-			if(show.contains(all[i])){
+//			if(show.contains(all[i])){
 				canvas.drawText(all[i], xPos, yPos, paint);
-			}
+//			}
 			paint.reset();// 重置画笔
 		}
 
@@ -94,13 +94,13 @@ public class SideBar extends View {
 			break;
 
 		default:
-			setBackgroundResource(R.drawable.sidebar_background);
+//			setBackgroundResource(R.drawable.sidebar_background);
 			if (oldChoose != c) {
 				if (c >= 0 && c < all.length) {
 					if (listener != null) {
 						listener.onTouchingLetterChanged(all[c]);
 					}
-					if (mTextDialog != null&&show.contains(all[c])) {
+					if (mTextDialog != null/*&&show.contains(all[c])*/) {
 						mTextDialog.setText(all[c]);
 						mTextDialog.setVisibility(View.VISIBLE);
 					}
