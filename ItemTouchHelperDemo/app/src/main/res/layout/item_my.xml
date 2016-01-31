@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="36dp"
         android:layout_margin="8dp"
+        android:maxLines="1"
         android:background="@drawable/bg_channel"
         android:foreground="?attr/selectableItemBackground"
         android:layout_centerInParent="true"
