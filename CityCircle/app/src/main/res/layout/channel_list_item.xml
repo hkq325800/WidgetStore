@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/channel_id"
+    android:background="@drawable/channel_item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/channel_logo_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/ic_launcher"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/channel_name"
+        android:layout_marginTop="23dp"
+        android:singleLine="true"
+        android:textSize="15sp"
+        android:textColor="#454545"
+        android:text="西藏旅游实时更新系列贴"
+        android:layout_toRightOf="@+id/channel_logo_view"
+        android:layout_toLeftOf="@+id/favor_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/create_time"
+        android:textSize="11sp"
+        android:textColor="#454535"
+        android:text="2015年4月4日"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/channel_name"
+        android:layout_alignLeft="@+id/channel_name"
+        android:layout_toLeftOf="@+id/favor_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/favor_logo"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:clickable="false"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/favor_normal"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="50dp"
+        android:background="#e9e9e9"
+        android:layout_marginRight="-1dp"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/channel_name"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cacbcc"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

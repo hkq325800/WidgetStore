@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="basecolor">#2196f3</color>
+    <color name="basecolor2">#33A0DC</color>
+    <color name="lightbasecolor">#56abe4</color>
+    <color name="darkbasecolor">#50368ae5</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_light">#2c2c2c</color>
+    <color name="dark_white">#EDEDED</color>
+    <color name="transpaarent">#00000000</color>
+    <color name="lightgrey">#858585</color>
+    <color name="grey_line">#cdcdcd</color>
+    <color name="line01">#e9e9e9</color>
+    <color name="line02">#e8e8e8</color>
+    <color name="edittextcolor">#7b7b7b</color>
+    <color name="red">#d23737</color>
+
+    <color name="darkred">#d23990</color>
+    <color name="lightyellow">#efb336</color>
+    <color name="yellow">#ea9518</color>
+
+    <color name="text_grey">#707070</color>
+</resources>

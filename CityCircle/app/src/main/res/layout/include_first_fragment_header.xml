@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/toolbar"
+    android:background="@color/basecolor"
+    android:layout_alignParentTop="true"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:text="App名字"
+        android:textColor="@color/white"
+        android:layout_alignParentLeft="true"
+        android:textSize="19sp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/user_profile_image_default"
+        app:border_width="1dp"
+        app:border_color="@color/white"/>
+</RelativeLayout>

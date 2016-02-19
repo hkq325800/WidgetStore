@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/buttom_bar_item_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/buttom_bar_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@drawable/bottom_bar_textcolor"
+        android:textSize="11sp"/>
+
+</LinearLayout>

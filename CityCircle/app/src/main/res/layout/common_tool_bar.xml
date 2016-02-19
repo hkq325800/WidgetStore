@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_tool_bar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize">
+
+    <LinearLayout
+        android:id="@+id/btn_left_p"
+        android:clickable="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@drawable/common_toolbar_left"
+        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ImageView
+            android:clickable="false"
+            android:id="@+id/btn_left"
+            android:layout_width="20dp"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_centerInParent="true"
+        android:text="Title"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/btn_right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:text="发布"
+        android:textSize="17sp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/btn_right_image"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+</RelativeLayout>

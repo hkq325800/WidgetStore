@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="loadactivitystyle" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/basecolor</item>
+    </style>
+
+    <style name="dialogstyle" parent="Theme.AppCompat.Light">
+
+    </style>
+
+    <!-- dialog从顶部弹出动画-->
+    <style name="DialogInOutBottomAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <!-- dialog从中间弹出动画-->
+    <style name="DialogInOutCenterAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/anim_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_scale_out</item>
+    </style>
+
+    <!-- dialog从顶部弹出动画-->
+    <style name="DialogInOutTopAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_top</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_top</item>
+    </style>
+
+    <!-- Toolbar样式-->
+    <style name="CommonToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">@color/basecolor</item>
+    </style>
+
+</resources>

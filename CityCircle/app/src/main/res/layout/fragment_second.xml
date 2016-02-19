@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ctbar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/channel_list"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/header_panel"
+        android:layout_below="@+id/toolbar"
+        android:background="#f0f0f0"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/header_panel_text"
+            android:layout_centerInParent="true"
+            android:text="在这里可以创建自己的频道"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cacbcc"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+    <shellljx.gmail.com.widget.CommonToolbar.CommonToolbar
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ctbar:toolbarTitle="频道"
+        ctbar:rightBtnText="新建"
+        ctbar:backgroundColor="@color/basecolor"
+        />
+
+</RelativeLayout>

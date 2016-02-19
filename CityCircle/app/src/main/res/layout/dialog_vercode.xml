@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginLeft="50dp"
+    android:layout_marginRight="50dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="验证手机号"
+        android:textSize="20sp"
+        android:layout_marginBottom="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/vercodeinput"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/vercode"
+            android:text="验证"
+            android:textSize="17sp"
+            android:layout_marginRight="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/vercodeedit"
+            android:layout_marginLeft="8dp"
+            android:maxLength="6"
+            android:singleLine="true"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:textColor="@color/edittextcolor"
+            android:background="@drawable/input_bg"
+            android:imeOptions="actionNext"
+            android:gravity="center_vertical"
+            android:layout_width="1dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/vercodebutton"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="4.5dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/vercode_bg"
+            android:text="获取验证码" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/line01"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:id="@+id/verbutton"
+        android:background="@color/lightbasecolor"
+        android:text="验证"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+</LinearLayout>

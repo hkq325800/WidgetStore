@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#cdcdcd" />
+        </shape>
+    </item>
+<!--要让普通模式放在最下面好像才可以感应到-->
+    <item >
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+</selector>

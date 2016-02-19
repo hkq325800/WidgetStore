@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ctbar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <shellljx.gmail.com.widget.CommonToolbar.CommonToolbar
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ctbar:toolbarTitle="注册"
+        ctbar:leftBtnsrc="@drawable/back_icon"
+        ctbar:backgroundColor="@color/basecolor"
+        />
+
+    <TextView
+        android:id="@+id/registerwarning"
+        android:layout_below="@id/toolbar"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/registerwarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/inputbox"
+        android:layout_below="@+id/registerwarning"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/login_title"
+            android:text="注册账号"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/phone"
+                android:text="手机"
+                android:textSize="17sp"
+                android:layout_alignTop="@+id/phoneedit"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/phoneedit"
+                android:layout_toRightOf="@+id/phone"
+                android:layout_marginBottom="5dp"
+                android:singleLine="true"
+                android:maxLength="15"
+                android:textSize="15sp"
+                android:inputType="phone"
+                android:textColor="@color/edittextcolor"
+                android:background="@drawable/input_bg"
+                android:layout_marginLeft="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+<!--            <TextView
+                android:id="@+id/vercode"
+                android:text="验证"
+                android:textSize="17sp"
+                android:layout_below="@+id/phone"
+                android:layout_alignRight="@+id/phone"
+                android:layout_marginBottom="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+            android:id="@+id/vercodeinput"
+            android:orientation="horizontal"
+            android:layout_below="@+id/phoneedit"
+            android:layout_toRightOf="@+id/vercode"
+            android:layout_marginBottom="5dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/vercodeedit"
+                android:layout_marginLeft="8dp"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:textColor="@color/edittextcolor"
+                android:background="@drawable/input_bg"
+                android:imeOptions="actionNext"
+                android:gravity="center_vertical"
+                android:layout_width="100dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/vercodebutton"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:padding="4.5dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/vercode_bg"
+                android:text="获取验证码" />
+        </LinearLayout>-->
+
+            <TextView
+                android:id="@+id/nick"
+                android:text="昵称"
+                android:textSize="17sp"
+                android:layout_below="@+id/phone"
+                android:layout_alignTop="@+id/nickedit"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/nickedit"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="2dp"
+                android:maxLength="8"
+                android:singleLine="true"
+                android:textSize="15sp"
+                android:layout_below="@id/phoneedit"
+                android:textColor="@color/edittextcolor"
+                android:background="@drawable/input_bg"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/nick"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/password"
+                android:text="密码"
+                android:textSize="17sp"
+                android:layout_below="@+id/nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/passwordedit"
+                android:layout_toRightOf="@+id/password"
+                android:layout_below="@id/nickedit"
+                android:singleLine="true"
+                android:maxLength="15"
+                android:inputType="textPassword"
+                android:textColor="@color/edittextcolor"
+                android:background="@drawable/input_bg"
+                android:layout_marginLeft="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:id="@+id/register_button"
+        android:layout_below="@+id/inputbox"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_height="60dp"
+        android:background="@color/lightbasecolor"
+        android:text="注册" />
+</RelativeLayout>

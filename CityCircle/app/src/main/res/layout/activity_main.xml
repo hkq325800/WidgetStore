@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--    <FrameLayout
+            android:id="@+id/content"
+            android:layout_above="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/buttom_bar"
+        android:background="#e5e5e5" />
+
+    <!--卫星菜单-->
+    <FrameLayout
+        android:id="@+id/menu_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttom_bar"
+        android:background="#42000000"
+        android:clickable="true"
+        android:visibility="invisible">
+
+        <shellljx.gmail.com.widget.ArcMenu.ArcMenu
+            android:id="@+id/arc_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/child_button01"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/arcmenu_button"
+                android:padding="15dp"
+                android:src="@drawable/button_text" />
+
+            <ImageView
+                android:id="@+id/child_button02"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/arcmenu_button"
+                android:padding="15dp"
+                android:src="@drawable/button_topic" />
+
+            <ImageView
+                android:id="@+id/child_button03"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/arcmenu_button"
+                android:padding="15dp"
+                android:src="@drawable/button_group" />
+        </shellljx.gmail.com.widget.ArcMenu.ArcMenu>
+    </FrameLayout>
+
+    //底部导航栏
+
+    <shellljx.gmail.com.widget.BottomTabBar.BottomBar
+        android:id="@+id/buttom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF">
+
+        <shellljx.gmail.com.widget.BottomTabBar.BottomBarItem
+            android:id="@+id/item1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            custom:itemIcon="@drawable/bottom_bar_icon"
+            custom:itemText="首页" />
+
+        <shellljx.gmail.com.widget.BottomTabBar.BottomBarItem
+            android:id="@+id/item2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            custom:itemIcon="@drawable/bottom_bar_icon2"
+            custom:itemText="槽友" />
+
+        <View
+            android:id="@+id/item_center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <shellljx.gmail.com.widget.BottomTabBar.BottomBarItem
+            android:id="@+id/item3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            custom:itemIcon="@drawable/bottom_bar_icon3"
+            custom:itemText="附近" />
+
+        <shellljx.gmail.com.widget.BottomTabBar.BottomBarItem
+            android:id="@+id/item4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            custom:itemIcon="@drawable/bottom_bar_icon4"
+            custom:itemText="设置" />
+
+    </shellljx.gmail.com.widget.BottomTabBar.BottomBar>
+
+    <RelativeLayout
+        android:id="@+id/menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/menu_button_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icxinzengyuan" />
+    </RelativeLayout>
+</RelativeLayout>

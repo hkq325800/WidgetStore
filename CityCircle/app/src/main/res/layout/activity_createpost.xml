@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <shellljx.gmail.com.widget.CommonToolbar.CommonToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"/>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:layout_above="@+id/bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_preview"
+                android:scaleType="centerCrop"
+                android:alpha="0.3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <shellljx.gmail.com.widget.KE.KeyboardControlEditText
+                android:id="@+id/new_content"
+                android:hint="@string/say_something"
+                android:scrollbars="vertical"
+                android:fadeScrollbars="true"
+                android:scrollbarStyle="outsideOverlay"
+                android:gravity="left|top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_menu"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize">
+
+            <ImageButton
+                android:id="@+id/menu_pic"
+                android:src="@drawable/createnew_camera"
+                style="?android:actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="?android:actionBarSize" />
+
+            <ImageButton
+                android:id="@+id/menu_topic"
+                android:src="@drawable/createnew_topic"
+                style="?android:actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="?android:actionBarSize" />
+
+            <ImageButton
+                android:id="@+id/menu_emation"
+                style="?android:actionButtonStyle"
+                android:src="@drawable/createnew_emation"
+                android:layout_width="wrap_content"
+                android:layout_height="?android:actionBarSize" />
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                style="?android:actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:drawableRight="@android:drawable/ic_menu_send"
+                android:text="发表"
+                android:id="@+id/menu_send"
+                android:textColor="?android:actionMenuTextColor"
+                android:textAppearance="?android:attr/actionMenuTextAppearance"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

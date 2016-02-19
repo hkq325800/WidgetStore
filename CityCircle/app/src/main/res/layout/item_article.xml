@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/card_frame">
+
+    <RelativeLayout
+        android:id="@+id/post_header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/user_profile"
+            app:border_color="@color/white"
+            app:border_width="1dp" />
+
+        <!--加了相对布局之后，再加具体的像素距离，就是距离相对的那个控件的距离-->
+
+        <LinearLayout
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/profile_image"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/profile_image"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="取个名字真难"
+                android:textColor="#000000"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/post_header_sex"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp">
+
+                <ImageView
+                    android:id="@+id/user_sex"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/man" />
+
+                <TextView
+                    android:id="@+id/user_old"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="23"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/profile_image"
+            android:text="2015-5-24"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-1dp"
+            android:background="#e9e9e9" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/post_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/post_header"
+        android:gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="7dp">
+
+        <TextView
+            android:id="@+id/content_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:maxLines="5"
+            android:text="@string/post_text"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/content_imag"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/content_text"
+            android:layout_marginTop="5dp"
+            android:scaleType="center"
+            android:src="@drawable/meishi" />
+
+        <RelativeLayout
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_imag"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/tag_image"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/tag" />
+
+            <TextView
+                android:id="@+id/tag_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tag_image"
+                android:text="来着哪个频道"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/space_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/post_content"
+        android:layout_marginTop="5dp"
+        android:background="#e9e9e9" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/space_line"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/post_status_padding"
+        android:paddingTop="@dimen/post_status_padding">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/post_zan"
+                    android:layout_width="@dimen/post_status_image"
+                    android:layout_height="@dimen/post_status_image"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/zan_normal" />
+
+                <TextView
+                    android:id="@+id/post_zan_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/post_zan"
+                    android:text="126"
+                    android:textSize="@dimen/post_status_text" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#e9e9e9" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/post_favor"
+                    android:layout_width="@dimen/post_status_image"
+                    android:layout_height="@dimen/post_status_image"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/command_normal" />
+
+                <TextView
+                    android:id="@+id/post_favor_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/post_favor"
+                    android:text="128"
+                    android:textSize="@dimen/post_status_text" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#e9e9e9" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/post_zhuanfa"
+                    android:layout_width="@dimen/post_status_image"
+                    android:layout_height="@dimen/post_status_image"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/zhuanfa_normal" />
+
+                <TextView
+                    android:id="@+id/post_zhuanfa_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/post_zhuanfa"
+                    android:text="1"
+                    android:textSize="@dimen/post_status_text" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

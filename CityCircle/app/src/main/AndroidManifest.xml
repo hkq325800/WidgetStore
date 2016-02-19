@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="shellljx.gmail.com.widget" >
+
+    <application
+        android:name="shellljx.gmail.com.APPAplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="shellljx.gmail.com.LoadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/loadactivitystyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="shellljx.gmail.com.app.activity.UsercenterActivity"/>
+        <activity
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"
+            android:name="shellljx.gmail.com.MainActivity"/>
+        <activity android:name="shellljx.gmail.com.app.test.TestActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="shellljx.gmail.com.app.activity.CreatePostActivity"/>
+        <activity android:name="shellljx.gmail.com.app.activity.LoginActivity"/>
+        <activity android:name="shellljx.gmail.com.app.activity.BaseActivity"/>
+        <activity android:name="shellljx.gmail.com.app.activity.RegisterActivity"/>
+        <service android:name="shellljx.gmail.com.service.RegisterCodeTimerService"
+            android:enabled="true"/>
+    </application>
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+</manifest>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_pressed_white_grey"
+            android:clickable="true"
+            android:padding="@dimen/padding_small">
+
+            <ImageView
+                android:id="@+id/iv_topic_avatar"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:src="@drawable/ic_test" />
+
+            <TextView
+                android:id="@+id/tv_topic_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_topic_avatar"
+                android:singleLine="true"
+                android:text="我的世界联机讨论"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:id="@+id/tv_topic_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_topic_name"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/iv_topic_avatar"
+                android:singleLine="true"
+                android:text="喜欢玩我的世界的来说说最好玩的瞬间"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/text_small" />
+
+            <TextView
+                android:id="@+id/tv_topic_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_topic_avatar"
+                android:layout_toRightOf="@+id/iv_topic_avatar"
+                android:text="关注 200      帖子 350"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/text_smaller" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_expand_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_pressed_white_grey"
+            android:padding="@dimen/padding_small">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_expand_button" />
+        </LinearLayout>
+        <!-- this is the button that will trigger sliding of the expandable view -->
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="80dp"
+        android:background="@color/grey_line" />
+    <!-- this is the expandable view that is initially hidden and will slide out when the more button is pressed -->
+    <LinearLayout
+        android:id="@+id/expandable"
+        android:orientation="vertical"
+        android:background="@color/black_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!-- put whatever you want in the expandable view -->
+            <TextView
+                android:id="@+id/bt_a"
+                android:text="关注"
+                android:clickable="true"
+                android:gravity="center"
+                android:background="@drawable/bg_pressed_grey_black"
+                android:drawableTop="@drawable/ic_zan_unselected"
+                android:drawablePadding="2dp"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/text_smaller"
+                android:padding="@dimen/padding_small"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <View
+                android:background="@color/text_grey"
+                android:layout_width="1px"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:id="@+id/bt_b"
+                android:clickable="true"
+                android:background="@drawable/bg_pressed_grey_black"
+                android:text="点赞"
+                android:textSize="@dimen/text_smaller"
+                android:drawableTop="@drawable/ic_guanzhu_unselected"
+                android:drawablePadding="2dp"
+                android:gravity="center"
+                android:textColor="@color/text_grey"
+                android:padding="@dimen/padding_small"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ViewPagerIndicator">
+        <!-- Style of the circle indicator. -->
+        <attr name="vpiCirclePageIndicatorStyle" format="reference"/>
+        <!-- Style of the icon indicator's views. -->
+        <attr name="vpiIconPageIndicatorStyle" format="reference"/>
+        <!-- Style of the line indicator. -->
+        <attr name="vpiLinePageIndicatorStyle" format="reference"/>
+        <!-- Style of the title indicator. -->
+        <attr name="vpiTitlePageIndicatorStyle" format="reference"/>
+        <!-- Style of the tab indicator's tabs. -->
+        <attr name="vpiTabPageIndicatorStyle" format="reference"/>
+        <!-- Style of the underline indicator. -->
+        <attr name="vpiUnderlinePageIndicatorStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="BottomBarItem">
+        <attr name="itemIcon" format="reference" />
+        <attr name="itemText" format="string" />
+    </declare-styleable>
+
+    <attr name="position">
+        <enum name="left_top" value="0"/>
+        <enum name="left_bottom" value="1"/>
+        <enum name="right_top" value="2"/>
+        <enum name="right_bottom" value="3"/>
+        <enum name="bottom_center" value="4"/>
+    </attr>
+
+    <declare-styleable name="ArcMenu">
+        <attr name="position" />
+        <attr name="radius" />
+    </declare-styleable>
+    
+    <declare-styleable name="CommonToolbar">
+        <attr name="toolbarTitle" format="string|reference"/>
+        <attr name="isLeftBtnVisible" format="boolean"/>
+        <attr name="leftBtnsrc" format="reference"/>
+        <attr name="isRightBtnVisible" format="boolean"/>
+        <attr name="rightBtnText" format="string"/>
+        <attr name="backgroundColor" format="reference" />
+        <attr name="rightBtnsrc" format="reference" />
+    </declare-styleable>
+</resources>
