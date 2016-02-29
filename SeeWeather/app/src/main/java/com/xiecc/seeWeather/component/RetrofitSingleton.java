@@ -46,7 +46,7 @@ public class RetrofitSingleton {
                                          .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                                          .build();
 
-
+        //初始化ApiInterface至网络
         apiService = retrofit.create(ApiInterface.class);
     }
 

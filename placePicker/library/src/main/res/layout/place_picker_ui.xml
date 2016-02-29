@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hidden_panel"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_hidden_panel_pickerui"
+    android:animateLayoutChanges="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.dpizarro.uipicker.library.picker.PickerUIListView
+            android:id="@+id/province_picker"
+            style="@style/PickerUI.ListView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:listitem="@layout/pickerui_item" />
+
+        <com.dpizarro.uipicker.library.picker.PickerUIListView
+            android:id="@+id/city_picker"
+            style="@style/PickerUI.ListView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:listitem="@layout/pickerui_item" />
+
+        <com.dpizarro.uipicker.library.picker.PickerUIListView
+            android:id="@+id/county_picker"
+            style="@style/PickerUI.ListView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:listitem="@layout/pickerui_item" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/picker_line_top"
+        style="@style/line_center_default"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_top_line_top_pickerui" />
+
+    <View
+        android:id="@+id/picker_line_bottom"
+        style="@style/line_center_default"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_top_line_bottom_pickerui" />
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PickerUI">
+        <!-- to use in PickerUI in the panel -->
+        <attr name="backgroundColor"    format="color"/>
+        <attr name="linesCenterColor"   format="color"/>
+
+        <!-- to use in PickerUIListView -->
+        <attr name="itemsClickables"    format="boolean"/>
+        <attr name="cities" format="reference"/>
+        <attr name="provinces" format="reference"/>
+        <attr name="counties" format="reference"/>
+
+        <!-- to use in PickerUI in the PickerUIListView by PickerUIAdapter -->
+        <attr name="textCenterColor"    format="color"/>
+        <attr name="textNoCenterColor"  format="color"/>
+
+    </declare-styleable>
+</resources>

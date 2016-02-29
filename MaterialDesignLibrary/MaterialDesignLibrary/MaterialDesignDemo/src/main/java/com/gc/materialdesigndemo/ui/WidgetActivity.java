@@ -27,7 +27,8 @@ public class WidgetActivity extends Activity {
 		setContentView(R.layout.activity_widgets);
 		
 //		SHOW SNACKBAR
-		findViewById(R.id.buttonSnackBar).setOnClickListener(new OnClickListener() {
+		final ButtonFlat btn = (ButtonFlat) findViewById(R.id.buttonSnackBar);
+		btn.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(final View flatButton) {
@@ -35,12 +36,11 @@ public class WidgetActivity extends Activity {
 						"Do you want change color of this button to red?",
 						"yes", new OnClickListener() {
 
-							@Override
-							public void onClick(View v) {
-								ButtonFlat btn = (ButtonFlat) findViewById(R.id.buttonSnackBar);
-								btn.setTextColor(Color.RED);
-							}
-						}).show();
+					@Override
+					public void onClick(View v) {
+						btn.getTextView().setTextColor(Color.RED);
+					}
+				}).show();
 			}
 		});
 //		SHOW DiALOG
@@ -53,14 +53,14 @@ public class WidgetActivity extends Activity {
 					
 					@Override
 					public void onClick(View v) {
-						Toast.makeText(WidgetActivity.this, "Click accept button", 1).show();
+						Toast.makeText(WidgetActivity.this, "Click accept button", Toast.LENGTH_SHORT).show();
 					}
 				});
 				dialog.setOnCancelButtonClickListener(new OnClickListener() {
 					
 					@Override
 					public void onClick(View v) {
-						Toast.makeText(WidgetActivity.this, "Click cancel button", 1).show();
+						Toast.makeText(WidgetActivity.this, "Click cancel button", Toast.LENGTH_SHORT).show();
 					}
 				});
 				dialog.show();

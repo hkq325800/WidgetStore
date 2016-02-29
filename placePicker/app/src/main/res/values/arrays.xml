@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="months">
+        <item>@string/january</item>
+        <item>@string/february</item>
+        <item>@string/march</item>
+        <item>@string/april</item>
+        <item>@string/may</item>
+        <item>@string/june</item>
+        <item>@string/july</item>
+        <item>@string/august</item>
+        <item>@string/september</item>
+        <item>@string/october</item>
+        <item>@string/november</item>
+        <item>@string/december</item>
+    </array>
+
+    <array name="fruits">
+        <item>Avocado</item>
+        <item>Blueberry</item>
+        <item>Coconut</item>
+        <item>Kiwifruit</item>
+        <item>Lemon</item>
+        <item>Cherries</item>
+        <item>Apple</item>
+        <item>Banana</item>
+        <item>Mango</item>
+        <item>Orange</item>
+        <item>Watermelon</item>
+        <item>Strawberries</item>
+        <item>Durian</item>
+        <item>Guava</item>
+        <item>Jackfruit</item>
+        <item>Olive</item>
+        <item>Pear</item>
+        <item>Sugar-apple</item>
+        <item>Pineapple</item>
+    </array>
+
+    static final String[] FRUITS = new String[] { "Apple", "Avocado", "Banana",
+    "Blueberry", "Coconut", "Durian", "Guava", "Kiwifruit",
+    "Jackfruit", "Mango", "Olive", "Pear", "Sugar-apple" };
+
+    <string-array name="countries_array">
+        <item>山东省</item>
+        <item>河北省</item>
+        <item>河南省</item>
+        <item>辽宁省</item>
+        <item>浙江省</item>
+        <item>江苏省</item>
+        <item>安徽省</item>
+        <item>上海</item>
+        <item>北京</item>
+        <item>四川省</item>
+        <item>云南省</item>
+        <item>湖北省</item>
+        <item>江西省</item>
+        <item>关东省</item>
+        <item>福建省</item>
+    </string-array>
+    <string-array name="city_array">
+        <item>济宁市</item>
+        <item>青岛市</item>
+        <item>济南市</item>
+        <item>临沂市</item>
+        <item>淄博市</item>
+        <item>泰安市</item>
+        <item>枣庄市</item>
+        <item>烟台市</item>
+        <item>威海市</item>
+        <item>杭州市</item>
+    </string-array>
+
+    <string-array name="county_array">
+        <item>梁山县</item>
+        <item>东平县</item>
+        <item>显现</item>
+        <item>是非得失</item>
+        <item>斯蒂芬森</item>
+        <item>打发</item>
+        <item>是服</item>
+        <item>斯蒂芬的</item>
+    </string-array>
+
+
+</resources>
