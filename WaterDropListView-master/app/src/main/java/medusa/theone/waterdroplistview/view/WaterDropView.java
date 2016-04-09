@@ -15,9 +15,10 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
-import medusa.theone.waterdroplistview.R;
-import medusa.theone.waterdroplistview.entity.Circle;
-import medusa.theone.waterdroplistview.utils.Utils;
+import com.kerchin.yellownote.R;
+
+import static com.kerchin.yellownote.utilities.NormalUtils.drawableToBitmap;
+
 
 /**
  * Created by xiayong on 2015/6/23.
@@ -67,8 +68,8 @@ public class WaterDropView extends View {
                 if (a.hasValue(R.styleable.WaterDropView_bottomcircle_y)) {
                     bottomCircle.setY(a.getDimensionPixelSize(R.styleable.WaterDropView_topcircle_y, 0));
                 }*/
-                if(a.hasValue(R.styleable.WaterDropView_waterdrop_color)){
-                   int waterDropColor =  a.getColor(R.styleable.WaterDropView_waterdrop_color, Color.GRAY);
+                if (a.hasValue(R.styleable.WaterDropView_waterdrop_color)) {
+                    int waterDropColor = a.getColor(R.styleable.WaterDropView_waterdrop_color, Color.GRAY);
                     mPaint.setColor(waterDropColor);
                 }
                 if (a.hasValue(R.styleable.WaterDropView_max_circle_radius)) {
@@ -106,8 +107,8 @@ public class WaterDropView extends View {
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
         mPaint.setStrokeWidth(STROKE_WIDTH);
-        Drawable drawable = getResources().getDrawable(R.drawable.refresh_arrow);
-        arrowBitmap = Utils.drawableToBitmap(drawable);
+        Drawable drawable = getResources().getDrawable(R.mipmap.refresh_arrow);
+        arrowBitmap = drawableToBitmap(drawable);
         parseAttrs(context, attrs);
     }
 
@@ -117,7 +118,7 @@ public class WaterDropView extends View {
         //宽度：上圆和下圆的最大直径
         int width = (int) ((mMaxCircleRadius + STROKE_WIDTH) * 2);
         //高度：上圆半径 + 圆心距 + 下圆半径
-        int height = (int) Math.ceil(bottomCircle.getY()+bottomCircle.getRadius() + STROKE_WIDTH * 2);
+        int height = (int) Math.ceil(bottomCircle.getY() + bottomCircle.getRadius() + STROKE_WIDTH * 2);
         setMeasuredDimension(width, height);
     }
 
@@ -133,8 +134,8 @@ public class WaterDropView extends View {
         canvas.drawCircle(topCircle.getX(), topCircle.getY(), topCircle.getRadius(), mPaint);
         canvas.drawCircle(bottomCircle.getX(), bottomCircle.getY(), bottomCircle.getRadius(), mPaint);
 //        canvas.drawBitmap(arrowBitmap, topCircle.getX() - topCircle.getRadius(), topCircle.getY() - topCircle.getRadius(), mPaint);
-        RectF bitmapArea = new RectF(topCircle.getX()-0.5f*topCircle.getRadius(),topCircle.getY()-0.5f*topCircle.getRadius(),topCircle.getX()+ 0.5f*topCircle.getRadius(),topCircle.getY()+0.5f*topCircle.getRadius());
-        canvas.drawBitmap(arrowBitmap,null,bitmapArea,mPaint);
+        RectF bitmapArea = new RectF(topCircle.getX() - 0.5f * topCircle.getRadius(), topCircle.getY() - 0.5f * topCircle.getRadius(), topCircle.getX() + 0.5f * topCircle.getRadius(), topCircle.getY() + 0.5f * topCircle.getRadius());
+        canvas.drawBitmap(arrowBitmap, null, bitmapArea, mPaint);
         super.onDraw(canvas);
     }
 

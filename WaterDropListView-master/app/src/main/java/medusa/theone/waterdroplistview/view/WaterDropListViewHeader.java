@@ -10,7 +10,6 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,8 +18,10 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
-import medusa.theone.waterdroplistview.R;
-import medusa.theone.waterdroplistview.utils.Utils;
+import com.kerchin.yellownote.R;
+
+import static com.kerchin.yellownote.utilities.NormalUtils.mapValueFromRangeToRange;
+
 
 public class WaterDropListViewHeader extends FrameLayout {
     private LinearLayout mContainer;
@@ -31,7 +32,7 @@ public class WaterDropListViewHeader extends FrameLayout {
 
     private int stretchHeight;
     private int readyHeight;
-    private static final int DISTANCE_BETWEEN_STRETCH_READY = 250;
+    private static final int DISTANCE_BETWEEN_STRETCH_READY = 150;//HKQ原来为250
 
     public enum STATE {
         normal,//正常
@@ -67,18 +68,19 @@ public class WaterDropListViewHeader extends FrameLayout {
         initHeight();
     }
 
-    private void initHeight(){
+    private void initHeight() {
 
         mContainer.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-			@Override
-			public void onGlobalLayout() {
-                stretchHeight =  mWaterDropView.getHeight();
+            @Override
+            public void onGlobalLayout() {
+                stretchHeight = mWaterDropView.getHeight();
                 readyHeight = stretchHeight + DISTANCE_BETWEEN_STRETCH_READY;
-				getViewTreeObserver().removeGlobalOnLayoutListener(this);
-			}
-		});
+                getViewTreeObserver().removeGlobalOnLayoutListener(this);
+            }
+        });
 
     }
+
     /**
      * 修改状态。注：状态的改变与前一个状态以及下拉头高度有关
      *
@@ -150,7 +152,7 @@ public class WaterDropListViewHeader extends FrameLayout {
     /**
      * 处理正在进行刷新状态
      */
-    private void  handleStateRefreshing() {
+    private void handleStateRefreshing() {
         mWaterDropView.setVisibility(View.GONE);
         mProgressBar.setVisibility(View.VISIBLE);
     }
@@ -171,14 +173,15 @@ public class WaterDropListViewHeader extends FrameLayout {
         lp.height = height;
         mContainer.setLayoutParams(lp);
         //通知水滴进行更新
-        if(mState == STATE.stretch){
-            float pullOffset = (float) Utils.mapValueFromRangeToRange(height, stretchHeight, readyHeight, 0, 1);
-            Log.d("pullOffset", String.valueOf(pullOffset));
-            if(pullOffset < 0 || pullOffset >1){
-                throw new IllegalArgumentException("pullOffset should between 0 and 1!"+mState+" "+height);
+        if (mState == STATE.stretch) {
+            float pullOffset = (float) mapValueFromRangeToRange(height, stretchHeight, readyHeight, 0, 1);
+            //Log.d("pullOffset", String.valueOf(pullOffset));
+            if (pullOffset < 0 || pullOffset > 1) {
+                //throw new IllegalArgumentException("pullOffset should between 0 and 1!"+mState+" "+height);
+            } else {
+                //Log.e("pullOffset", "pullOffset:" + pullOffset);
+                mWaterDropView.updateComleteState(pullOffset);
             }
-            //Log.e("pullOffset", "pullOffset:" + pullOffset);
-            mWaterDropView.updateComleteState(pullOffset);
         }
 
     }
