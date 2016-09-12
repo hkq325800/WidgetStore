@@ -11,10 +11,12 @@ github项目梳理（截止至9.8日的star的PullLoadMoreRecyclerView）
 - BlurView Dynamic iOS-like blur of underlying Views  https://github.com/Dimezis/BlurView
 - StickTextView图片文字贴纸 https://github.com/hanbaokun/StickTextView
 - PhotoView an easily usable implementation of a zooming Android ImageView https://github.com/chrisbanes/PhotoView
+- Android-PictureTagView仿nice图片上打标签控件 https://github.com/saiwu-bigkoo/Android-PictureTagView
 
 ***控件***
 
-- DayNightSwitch iOS的精巧开关 https://github.com/finngaida/DayNightSwitch
+- -DayNightSwitch iOS的精巧开关 https://github.com/finngaida/DayNightSwitch
+- KProgressHUD对话框 https://github.com/Kaopiz/KProgressHUD
 - BubblePopupWindow气泡弹窗 https://github.com/smuyyh/BubblePopupWindow
 - SpiderWebScoreView蛛网评分控件 https://github.com/xiaopansky/SpiderWebScoreView
 - ZGDanmaku基于OpenGLES的弹幕库https://github.com/zhgeaits/ZGDanmaku
@@ -33,10 +35,11 @@ github项目梳理（截止至9.8日的star的PullLoadMoreRecyclerView）
 - BGABanner-Android轮播Splash https://github.com/bingoogolapple/BGABanner-Android
 - ZoomHoverView点击放大悬浮的自定义View https://github.com/zyyoona7/CustomViewSets
 - SwipeCardsView卡片滑动和左右飞出 https://github.com/huxq17/SwipeCardsView
+- FlipShare https://github.com/JeasonWong/FlipShare
 
 ***列表控件***
 
-- BGARefreshLayout-Android四种形式的下拉刷新 https://github.com/bingoogolapple/BGARefreshLayout-Android
+- -BGARefreshLayout-Android四种形式的下拉刷新 https://github.com/bingoogolapple/BGARefreshLayout-Android
 - FocusResize对Item做文章的recyclerView https://github.com/borjabravo10/FocusResize
 - PullLoadMoreRecyclerView 实现RecyclerView下拉刷新和上拉加载更多 https://github.com/WuXiaolong/PullLoadMoreRecyclerView
 - PullZoomRecyclerView A pull to zoom-in RecyclerView https://github.com/dinuscxj/PullZoomRecyclerView
@@ -47,8 +50,8 @@ github项目梳理（截止至9.8日的star的PullLoadMoreRecyclerView）
 ***图表控件***
 
 - StockChart股票图表 https://github.com/AndroidJiang/StockChart
-- AndroidCharts表格库 https://github.com/HackPlan/AndroidCharts
-- Jgraph动画图表控件 https://github.com/mychoices/Jgraph
+- +AndroidCharts表格库 https://github.com/HackPlan/AndroidCharts
+- +Jgraph动画图表控件 https://github.com/mychoices/Jgraph
 
 ***引导页***
 
@@ -58,47 +61,53 @@ github项目梳理（截止至9.8日的star的PullLoadMoreRecyclerView）
 
 ***动画***
 
+- snowfall https://github.com/StylingAndroid/Snowfall
 - FlipShare https://github.com/JeasonWong/FlipShare
 - A custom checkbox with animation https://github.com/CoXier/CheckBox
 - Particle简单粒子动画 https://github.com/JeasonWong/Particle
 - SearchMenuAnim类似的搜索动画(动画教材) https://github.com/kongnanlive/SearchMenuAnim
 - BGABadgeView-Android徽章弹性数字 https://github.com/bingoogolapple/BGABadgeView-Android
-- YahooNewsOnboarding animations Splash https://github.com/rahulrj/YahooNewsOnboarding
+- !YahooNewsOnboarding animations Splash https://github.com/rahulrj/YahooNewsOnboarding
+- AddCartAniamtion仿美团外卖添加动画的三方库 https://github.com/jlcclidong/AddCartAniamtion
+- BezierCurveAnimater把商品添加到购物车的动画效果（贝塞尔曲线） https://github.com/AndroidStudy2015/BezierCurveAnimater
+- LiulishuoPreview用raw的视频做guide页 https://github.com/JeasonWong/LiulishuoPreview
+- ElemeShoppingView仿饿了么点击购物效果 https://github.com/JeasonWong/ElemeShoppingView
 
 ***多媒体***
 
 - Music-Player https://github.com/andremion/Music-Player
 - VCameraDemo微信小视频+秒拍,FFmpeg库封装 https://github.com/motianhuo/VCameraDemo
+- OhMyBiliBili高仿哔哩哔哩动画安卓客户端 https://github.com/HotBitmapGG/OhMyBiliBili
 - jjdxm_ijkplayer基于ijkplayer简单的UI界面 https://github.com/jjdxmashl/jjdxm_ijkplayer
 - PLDroidPlayer音视频播放器SDK 基于ijkplayer https://github.com/pili-engineering/PLDroidPlayer
-- LyricViewDemo歌词效果 https://github.com/WuLiFei/LyricViewDemo
+- !LyricViewDemo歌词效果 https://github.com/WuLiFei/LyricViewDemo
 - Android-Camera-Example https://github.com/josnidhin/Android-Camera-Example
 - WliveTV基于ijkplayer的视频直播软件 https://github.com/wanliyang1990/WliveTV
 
 ***文字处理***
 
-- Knife a rich text editor component https://github.com/mthli/Knife
-- emotionkeyboard高仿微信表情输入与键盘输入https://github.com/shinezejian/emotionkeyboard
-- WeiBoLayout识别包含超链接、#字话题、@ https://github.com/zhe525069676/WeiBoLayout
-- Markdown原生Markdown解析器 https://github.com/zzhoujay/Markdown
-- RichText富文本解析器，支持Html和Markdown https://github.com/zzhoujay/RichText
-- MarkdownEditors https://github.com/qinci/MarkdownEditors
+- TypeTextView打字机效果 https://github.com/zmywly8866/TypeTextView
+- !Knife a rich text editor component https://github.com/mthli/Knife
+- !emotionkeyboard高仿微信表情输入与键盘输入https://github.com/shinezejian/emotionkeyboard
+- !WeiBoLayout识别包含超链接、#字话题、@ https://github.com/zhe525069676/WeiBoLayout
+- -RichText富文本解析器，支持Html和Markdown https://github.com/zzhoujay/RichText
+- !MarkdownEditors https://github.com/qinci/MarkdownEditors
 - FaceTextInputLayout颜文字排版 https://github.com/HelloVass/FaceTextLayout
-- CodeView能显示代码，并且能够进行代码高亮的一个控件 https://github.com/Thereisnospon/CodeView
+- !CodeView能显示代码，并且能够进行代码高亮的一个控件 https://github.com/Thereisnospon/CodeView
 
 ***文件相关***
 
 - Android-FilePicker文件/照片选取 https://github.com/DroidNinja/Android-FilePicker
-- BGAPhotoPicker-Android图库照片选择https://github.com/bingoogolapple/BGAPhotoPicker-Android
+- !BGAPhotoPicker-Android图库照片选择 附带BGANinePhotoLayout仿朋友圈 https://github.com/bingoogolapple/BGAPhotoPicker-Android
 
 ***二维码***
 - BGAQRCode-Android二维码 https://github.com/bingoogolapple/BGAQRCode-Android
-- android-zxingLibrary几行代码快速集成二维码扫描功能 https://github.com/yipianfengye/android-zxingLibrary
+- +android-zxingLibrary几行代码快速集成二维码扫描功能 https://github.com/yipianfengye/android-zxingLibrary
 
 
 ***皮肤***
 
-- AndroidStudyCode知乎和简书的夜间模式实现套路 https://github.com/D-clock/AndroidStudyCode
+- +AndroidStudyCode知乎和简书的夜间模式实现套路 https://github.com/D-clock/AndroidStudyCode
 - ChangeSkin鸿洋插件换肤 https://github.com/hongyangAndroid/ChangeSkin
 
 ***架构相关***
@@ -110,12 +119,14 @@ github项目梳理（截止至9.8日的star的PullLoadMoreRecyclerView）
 - AndroidDaemonService合理优雅的进程保活方式 https://github.com/D-clock/AndroidDaemonService
 - MVVMLight A toolkit help to build Android MVVM Application https://github.com/Kelin-Hong/MVVMLight
 - CommonAdapter最佳实践系列的adapter https://github.com/tianzhijiexian/CommonAdapter
-- RxJavaAPI https://github.com/iceGeneral/RxJavaAPI
+- !RxJavaAPI https://github.com/iceGeneral/RxJavaAPI
+- RxBinding https://github.com/JakeWharton/RxBinding
+- !RxJavaSamples https://github.com/rengwuxian/RxJavaSamples
 - toolbox-weex Weex的初学好例子 https://github.com/hugojing/toolbox-weex
 - WeexOne客户端例子 https://github.com/dodola/WeexOne
 - GaGaMall RN例子 https://github.com/jiangqqlmj/GaGaMall
 - DataBindingSample https://github.com/markzhai/DataBindingSample
-- NBADataBinding简单实现DataBinding https://github.com/fuqinwu/NBADataBinding
+- +NBADataBinding简单实现DataBinding https://github.com/fuqinwu/NBADataBinding
 
 ***杂项***
 
@@ -123,3 +134,4 @@ github项目梳理（截止至9.8日的star的PullLoadMoreRecyclerView）
 - HermesEventBus基于Eventbus进程间通信 https://github.com/eleme/HermesEventBus
 - PermissionsDispatcher provides a simple annotation-based API to handle runtime permissions in Android Marshmallow https://github.com/hotchemi/PermissionsDispatcher
 - awesome-adb Adb命令大全 https://github.com/mzlogin/awesome-adb
+- rxjava-examples手册应用 https://github.com/leeowenowen/rxjava-examples
