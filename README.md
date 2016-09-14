@@ -76,13 +76,17 @@ github项目梳理（截止至9.8日的star的PullLoadMoreRecyclerView）
 ***多媒体***
 
 - Music-Player https://github.com/andremion/Music-Player
-- VCameraDemo微信小视频+秒拍,FFmpeg库封装 https://github.com/motianhuo/VCameraDemo
 - OhMyBiliBili高仿哔哩哔哩动画安卓客户端 https://github.com/HotBitmapGG/OhMyBiliBili
 - jjdxm_ijkplayer基于ijkplayer简单的UI界面 https://github.com/jjdxmashl/jjdxm_ijkplayer
 - PLDroidPlayer音视频播放器SDK 基于ijkplayer https://github.com/pili-engineering/PLDroidPlayer
 - !LyricViewDemo歌词效果 https://github.com/WuLiFei/LyricViewDemo
-- Android-Camera-Example https://github.com/josnidhin/Android-Camera-Example
 - WliveTV基于ijkplayer的视频直播软件 https://github.com/wanliyang1990/WliveTV
+
+- VCameraDemo微信小视频+秒拍,FFmpeg库封装 https://github.com/motianhuo/VCameraDemo
+- Android-Camera-Example https://github.com/josnidhin/Android-Camera-Example
+- MagicCamera https://github.com/wuhaoyu1990/MagicCamera
+- StickerCamera https://github.com/Skykai521/StickerCamera
+- android-crop-master https://github.com/Skykai521/android-crop-master
 
 ***文字处理***
 
@@ -133,5 +137,8 @@ github项目梳理（截止至9.8日的star的PullLoadMoreRecyclerView）
 - AndResGuard目前最优混淆 https://github.com/shwenzhang/AndResGuard
 - HermesEventBus基于Eventbus进程间通信 https://github.com/eleme/HermesEventBus
 - PermissionsDispatcher provides a simple annotation-based API to handle runtime permissions in Android Marshmallow https://github.com/hotchemi/PermissionsDispatcher
+- tess-two图文识别 https://github.com/rmtheis/tess-two/
+- android-tesseract-ocr图文识别 https://github.com/DynamsoftRD/android-tesseract-ocr
+
 - awesome-adb Adb命令大全 https://github.com/mzlogin/awesome-adb
 - rxjava-examples手册应用 https://github.com/leeowenowen/rxjava-examples
