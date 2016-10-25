@@ -9,6 +9,7 @@ github项目梳理（截止至9.8日的star的PullLoadMoreRecyclerView）
 - KJGallery一个支持Gif图片以及普通图片预览，支持双击缩放，单机退出，同时可以选择使用jni的形式去高效加载gif或者更更精简的(仅2个类)gif控件 https://github.com/kymjs/KJGallery
 - BlurView实时模糊Drawable放置于控件前用于模糊 https://github.com/robinxdroid/BlurView
 - BlurView Dynamic iOS-like blur of underlying Views  https://github.com/Dimezis/BlurView
+- RealtimeBlurView https://github.com/mmin18/RealtimeBlurView
 - StickTextView图片文字贴纸 https://github.com/hanbaokun/StickTextView
 - PhotoView an easily usable implementation of a zooming Android ImageView https://github.com/chrisbanes/PhotoView
 - Android-PictureTagView仿nice图片上打标签控件 https://github.com/saiwu-bigkoo/Android-PictureTagView
@@ -32,16 +33,19 @@ github项目梳理（截止至9.8日的star的PullLoadMoreRecyclerView）
 - NumberPickerView flexible attributes https://github.com/Carbs0126/NumberPickerView
 - InfiniteCycleViewPager轮转展示方式ViewPager https://github.com/DevLight-Mobile-Agency/InfiniteCycleViewPager
 - android-card-slide-panel卡片联动展示 https://github.com/xmuSistone/android-card-slide-panel
-- BGABanner-Android轮播Splash https://github.com/bingoogolapple/BGABanner-Android
+- +BGABanner-Android轮播Splash https://github.com/bingoogolapple/BGABanner-Android
 - ZoomHoverView点击放大悬浮的自定义View https://github.com/zyyoona7/CustomViewSets
 - SwipeCardsView卡片滑动和左右飞出 https://github.com/huxq17/SwipeCardsView
-- FlipShare https://github.com/JeasonWong/FlipShare
+- +FlipShare https://github.com/JeasonWong/FlipShare
 
 ***列表控件***
 
+- 更多人的选择XRecyclerView https://github.com/jianghejie/XRecyclerView
+- 包围式的控件支持更多组件RefreshLoadMoreLayout https://github.com/hkq325800/RefreshLoadMoreLayout
+- 类似X PullLoadMoreRecyclerView(单页数据不能加载更多) https://github.com/WuXiaolong/PullLoadMoreRecyclerView
+
 - -BGARefreshLayout-Android四种形式的下拉刷新 https://github.com/bingoogolapple/BGARefreshLayout-Android
 - FocusResize对Item做文章的recyclerView https://github.com/borjabravo10/FocusResize
-- PullLoadMoreRecyclerView 实现RecyclerView下拉刷新和上拉加载更多 https://github.com/WuXiaolong/PullLoadMoreRecyclerView
 - PullZoomRecyclerView A pull to zoom-in RecyclerView https://github.com/dinuscxj/PullZoomRecyclerView
 - BGASwipeItemLayout-Android列表项滑动 https://github.com/bingoogolapple/BGASwipeItemLayout-Android
 - LoaderView带框的(TextView ImageView 不实用) https://github.com/elye/loaderviewlibrary
@@ -55,14 +59,14 @@ github项目梳理（截止至9.8日的star的PullLoadMoreRecyclerView）
 
 ***引导页***
 
+- GuideView遮罩引导 https://github.com/binIoter/GuideView
 - GuideView遮罩引导页 https://github.com/llxdaxia/GuideView
 - MaterialIntroView引导页 https://github.com/iammert/MaterialIntroView
 - Highlight一个用于app指向性功能引导的库 https://github.com/hongyangAndroid/Highlight
 
 ***动画***
 
-- snowfall https://github.com/StylingAndroid/Snowfall
-- FlipShare https://github.com/JeasonWong/FlipShare
+- -snowfall https://github.com/StylingAndroid/Snowfall
 - A custom checkbox with animation https://github.com/CoXier/CheckBox
 - Particle简单粒子动画 https://github.com/JeasonWong/Particle
 - SearchMenuAnim类似的搜索动画(动画教材) https://github.com/kongnanlive/SearchMenuAnim
@@ -75,6 +79,7 @@ github项目梳理（截止至9.8日的star的PullLoadMoreRecyclerView）
 
 ***多媒体***
 
+- RxAndroidAudio录音解决方案 https://github.com/Piasy/RxAndroidAudio
 - Music-Player https://github.com/andremion/Music-Player
 - OhMyBiliBili高仿哔哩哔哩动画安卓客户端 https://github.com/HotBitmapGG/OhMyBiliBili
 - jjdxm_ijkplayer基于ijkplayer简单的UI界面 https://github.com/jjdxmashl/jjdxm_ijkplayer
